@@ -1,9 +1,13 @@
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, url_for,flash,redirect
 from forms import RegistrationForm, LoginForm
+
 app= Flask(__name__,template_folder='template')
-
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
 app.config['SECRET_KEY']='195105ee931397613b0e58683278bcd1'
+db=SQLAlchemy(app)
 
+class User(db.)
 post=[
     {
         'author':'Amish Tripathi',
