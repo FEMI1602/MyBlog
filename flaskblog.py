@@ -7,7 +7,9 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
 app.config['SECRET_KEY']='195105ee931397613b0e58683278bcd1'
 db=SQLAlchemy(app)
 
-class User(db.)
+class User(db.Model):
+    id=db.Column(db.Integer, primary_key=True)
+    username
 post=[
     {
         'author':'Amish Tripathi',
